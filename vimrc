@@ -1,5 +1,9 @@
 " Plugins using Plug. Including Themes
-call plug#begin('~/.vim/plugged')
+if has("nvim")
+  call plug#begin('~/.config/nvim/plugged')
+else
+  call plug#begin('~/.vim/plugged')
+endif
 
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -17,6 +21,9 @@ let g:airline_theme='luna'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Theme selection
+if (has("termguicolors"))
+  set termguicolors
+endif
 colorscheme gruvbox
 set background=dark
 
