@@ -27,6 +27,9 @@ endif
 colorscheme gruvbox
 set background=dark
 
+"language
+language en_US
+
 "neovim defaults -> sane defaults
 set autoindent
 set autoread
